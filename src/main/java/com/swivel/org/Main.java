@@ -88,6 +88,11 @@ public class Main {
         sc = new Scanner(System.in);
         String value = sc.nextLine();
 
+        if (searchId.isEmpty() || term.isEmpty() || value.isEmpty()) {
+            System.out.println("Please do not enter empty values. Input validation failed. Please try again from the beginning");
+            return;
+        }
+
         try {
             // Search will only cost O(n) in the worst case and O(1) in the best case
             searchDataSet(searchId, term, value);
